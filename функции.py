@@ -1,6 +1,8 @@
 def print_params():
-    print("Параметр " * 2)
+    print('Параметр')
+    print('Параметр')
 
 
 for _ in range(4):
     print_params()
+
