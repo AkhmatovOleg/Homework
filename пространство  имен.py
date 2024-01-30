@@ -6,9 +6,9 @@ def test():
 test()
 
 
-def test2():
-    x, y, z = 1, 2, 3
+def test2(x, y, z):
     print(x, y, z)
 
 
-test2()
+test2(2, 3, 4)
+
