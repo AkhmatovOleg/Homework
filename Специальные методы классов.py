@@ -10,5 +10,5 @@ class House:
 
 
 house = House()
-house.setNewNumberOfFloors(floors=10)
+house.setNewNumberOfFloors(floors=90)
 
