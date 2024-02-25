@@ -1,6 +1,7 @@
 class House:
 
     def __init__(self):
+        self.numbers_Of_Floors = None
         self.number_Of_Floors = 0
 
     def setNewNumberOfFloors(self, floors):
@@ -10,3 +11,4 @@ class House:
 
 house = House()
 house.setNewNumberOfFloors(floors=10)
+
