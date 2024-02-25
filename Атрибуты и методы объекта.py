@@ -1,13 +1,13 @@
 class House:
 
     def __init__(self):
-        self.number_of_Floor = 10
+        self.numberofFloor = 10
 
 
 house =House()
 
 house.floor = 1
-while house.floor < house.number_of_Floor:
+while house.floor < house.numberofFloor:
     house.floor += 1
 print('Текущий этаж равен',house.floor)
 
