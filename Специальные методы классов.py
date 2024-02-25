@@ -8,6 +8,5 @@ class House:
         self.numbers_Of_Floors = floors
 
 
-
 house = House()
 house.setNewNumberOfFloors(floors=10)
