@@ -1,9 +1,6 @@
 class Car:
     price = 1000000
 
-    def __init__(self):
-        self.horse_powers = None
-
     def horse_powers(self):
         self.horse_powers = 1000
 
