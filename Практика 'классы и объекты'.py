@@ -31,7 +31,7 @@ class Man:
 
     def shopping(self):
         if self.house.money >= 50:
-            print('{} сходил в магазин за едой'.format(self.name))
+            cprint('{} сходил в магазин за едой'.format(self.name), color='yellow')
             self.house.money -= 50
             self.house.food += 50
         else:
@@ -82,7 +82,7 @@ for citizen in citizens:
     citizen.go_into_house(house=my_sweet_home)
 
 for day in range(1, 366):
-    print('========= день {} ========='.format(day))
+    cprint('========= день {} ========='.format(day), color="grey")
     for citizen in citizens:
         citizen.act()
     print('---------- в конце дня ----------')
