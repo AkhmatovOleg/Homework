@@ -152,3 +152,4 @@ while piter.content < TOTAL_CARGO:
     print(loader_2)
     print(moscow)
     print(piter)
+
