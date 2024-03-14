@@ -20,4 +20,4 @@ elif score_1 < score_2 or score_1 == score_2 and team1_time < team2_time:
 else:
     challenge_result = 'Ничья!'
 print(f'Результат битвы:{challenge_result}')
-print(f'Сегодня было решено {task_total} задач, в среднем по {time_avg:.2f} секунды на задачу')
+print(f'Сегодня было решено {task_total} задач, в среднем по {time_avg:10.2f} секунды на задачу')
