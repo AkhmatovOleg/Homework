@@ -5,4 +5,5 @@ def odd_number(x):
 
 mu_numbers = [1, 2, 5, 7, 12, 11, 35, 4, 89, 10]
 result = map(exp,filter(odd_number, mu_numbers))
+print(result)
 print(list(result))
