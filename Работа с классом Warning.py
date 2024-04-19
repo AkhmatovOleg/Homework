@@ -14,17 +14,17 @@ while b > 0:
     b -= 0.01
     print(a / b)
     print(f'b равно:{b}')
-# print("Фильтр 'error'")
-# warnings.simplefilter("error", UserWarning)
+print("Фильтр 'error'")
+warnings.simplefilter("error", UserWarning)
 division(a, b)
 print(division(a, b))
 
-# print("Фильтр 'ignore'")
-# warnings.simplefilter("ignore", UserWarning)
-# division(a, b)
-# print(division(a, b))
-#
-# print("Фильтр 'always'")
-# warnings.simplefilter("always",UserWarning)
-# division(a, b)
-# print(division(a, b))
+print("Фильтр 'ignore'")
+warnings.simplefilter("ignore", UserWarning)
+division(a, b)
+print(division(a, b))
+
+print("Фильтр 'always'")
+warnings.simplefilter("always",UserWarning)
+division(a, b)
+print(division(a, b))
