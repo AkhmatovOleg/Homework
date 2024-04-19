@@ -12,14 +12,17 @@ def division(a, b):
 
 a = 1
 b = 1
-# print("Фильтр 'error'")
-# warnings.simplefilter("error", UserWarning)
-# division(a, b)
+print("Фильтр 'error'")
+warnings.simplefilter("error", UserWarning)
+division(a, b)
+print(division(a, b))
 
-# print("Фильтр 'ignore'")
-# warnings.simplefilter("ignore", UserWarning)
-# division(a, b)
+print("Фильтр 'ignore'")
+warnings.simplefilter("ignore", UserWarning)
+division(a, b)
+print(division(a, b))
 
 print("Фильтр 'always'")
 warnings.simplefilter("always",UserWarning)
 division(a, b)
+print(division(a, b))
