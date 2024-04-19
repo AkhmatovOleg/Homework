@@ -6,7 +6,8 @@ def division(a, b):
         b -= 0.01
         print(a / b)
         print(f'b равно:{b}')
-        warnings.warn('На ноль делить нельзя', category=UserWarning)
+        if b == 0:
+            warnings.warn('На ноль делить нельзя', category=UserWarning)
 
 
 a = 1
