@@ -37,12 +37,13 @@ print(division_1_def(2, 10))
 # задача 3. Вызываемые объекты
 class Rect:
 
-    def __init__(self, a):
+    def __init__(self, a, b):
         self.a = a
+        self.b = b
 
-    def __call__(self, b):
-        return b * self.a
+    def __call__(self):
+        return self.b * self.a
 
 
-rect_1 = Rect(2)
-print(rect_1(3))
+rect_1 = Rect(2, 3)
+print(rect_1())
