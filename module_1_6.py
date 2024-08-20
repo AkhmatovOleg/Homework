@@ -1,0 +1,16 @@
+my_dict = {'oleg': 32, 'lena': 33, 'dima': 23}
+print(my_dict)
+print(my_dict['oleg'])
+print(my_dict.get('mila'))
+my_dict.update({'mila': 34, 'lera': 30})
+print(my_dict)
+a = my_dict.pop('mila')
+print(a)
+print(my_dict)
+my_set = {1, 2, 3, 4, 2, 'oleg', 'lena'}
+print(my_set)
+my_set.add(7)
+my_set.add('mila')
+print(my_set)
+my_set.discard(7)
+print(my_set)
