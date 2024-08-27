@@ -3,6 +3,7 @@ primes = []
 not_primes = []
 is_prime = True
 for i in numbers:
+    i = i+1
     k = 0
     for j in range(1, i + 1):
         if i % j == 0 and i != j and j != 1:
