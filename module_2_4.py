@@ -10,7 +10,7 @@ for i in numbers:
     if k == 2:
         is_prime = True
         primes.append(i)
-    else:
+    elif i != 1:
         is_prime = False
         not_primes.append(i)
 
