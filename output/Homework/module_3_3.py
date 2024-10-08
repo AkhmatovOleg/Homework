@@ -6,7 +6,6 @@ print_params()
 print_params(b=25)
 print_params(c=[1, 2, 3])
 
-
 values_list = (1, 'str', False)
 values_dict = {'a': 3, 'b': 'dict', 'c': True}
 print_params(*values_list)
