@@ -32,3 +32,7 @@ def insertion_sort(ls):
 
 bubble_sort(data)
 print(data)
+selection_sort(data)
+print(data)
+insertion_sort(data)
+print(data)
