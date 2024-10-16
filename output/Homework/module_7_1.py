@@ -18,8 +18,9 @@ class Shop:
         return str_product
 
     def add(self, *products):
+        get_file = self.get_products()
         for i in products:
-            if self.get_products().find(f'{i.name}' and f'{i.weight}') == -1:
+            if get_file.find(f'{i.name}' and f'{i.weight}') == -1:
                 file = open(self.__file_name, 'a')
                 file.write(f'{i}\n')
                 file.close()
