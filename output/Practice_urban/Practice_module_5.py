@@ -40,4 +40,3 @@ if __name__ == '__main__':
                 continue
             database.add_user(user.username, user.password)
         print(database.data)
-2
