@@ -10,7 +10,7 @@ class WordsFinder:
         with open(name, encoding='utf-8') as file:
             for line in file:
                 words_lower = line.lower()
-                string_punctuation = (',', '.', '=', '!', '?', ';', ':', '-', '\n')
+                string_punctuation = (',', '.', '=', '!', '?', ';', ':', '-', '', '—', '\n' )
                 for p in string_punctuation:
                     if p in words_lower:
                         words_lower = words_lower.replace(p, '')
@@ -47,3 +47,18 @@ finder2 = WordsFinder('test_file.txt')
 print(finder2.get_all_words()) # Все слова
 print(finder2.find('TEXT')) # 3 слово по счёту
 print(finder2.count('teXT'))
+
+finder1 = WordsFinder('Walt Whitman - O Captain! My Captain!.txt')
+print(finder1.get_all_words())
+print(finder1.find('the'))
+print(finder1.count('the'))
+
+finder1 = WordsFinder('Rudyard Kipling - If.txt')
+print(finder1.get_all_words())
+print(finder1.find('the'))
+print(finder1.count('the'))
+
+finder1 = WordsFinder('Mother Goose - Monday’s Child.txt')
+print(finder1.get_all_words())
+print(finder1.find('the'))
+print(finder1.count('the'))
