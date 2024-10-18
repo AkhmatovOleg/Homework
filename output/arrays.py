@@ -1,4 +1,4 @@
-from Practice_urban.sortfunc_2 import bubble_sort, selection_sort, insertion_sort
+from Practice_urban.Practice_module_4_2 import bubble_sort, selection_sort, insertion_sort
 
 
 data_1 = [2, 1, 5, 6, 3, 9, 0, 8]
