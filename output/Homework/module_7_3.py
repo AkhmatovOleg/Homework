@@ -24,7 +24,6 @@ class WordsFinder:
         words = self.get_all_words()
         name = self.file_name
         words_list = words[name]
-
         if word in words_list:
             position = words_list.index(word)
             return {name: position + 1}
