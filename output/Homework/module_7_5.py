@@ -1,7 +1,7 @@
 import os
 import time
 
-directory = 'C:\\Users\\user\\PycharmProjects\\probe'
+directory = r'C:\Users\user\PycharmProjects\probe\output\Homework'
 
 for root, dirs, files in os.walk(directory):
     for file in files:
