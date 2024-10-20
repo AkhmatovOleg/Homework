@@ -24,7 +24,6 @@
 
 
 def personal_sum(numbers):
-    numbers = numbers
     result = 0
     incorrect_data = 0
     for i in numbers:
@@ -40,7 +39,6 @@ def calculate_average(numbers):
     if not isinstance(numbers, (list, tuple)):
         print('В numbers записан некорректный тип данных')
         return None
-    numbers = numbers
     sum_1, incorrect_data = personal_sum(numbers)
     count = len(numbers) - incorrect_data
     try:
