@@ -17,27 +17,29 @@ class WordsFinder:
                     words_lower = words_lower.split(' ')
                     my_list.extend(words_lower)
             all_words[file_name] = my_list
-            return all_words
+        return all_words
 
     def find(self, word):
         word = word.lower()
         words = self.get_all_words()
+        result = {}
         for name, words in words.items():
             if word in words:
                 position = words.index(word)
-                return {name: position + 1}
-            else:
-                return f'{word} -  такого слова в списке нет'
+                result[name] = position +1
+        return result or f'{word} -  такого слова в списке нет'
 
     def count(self, word):
         word = word.lower()
         words = self.get_all_words()
+        words_count = {}
         for name, words in words.items():
-            word_count = 0
+            count = 0
             for i in words:
                 if i == word:
-                    word_count += 1
-            return {name: word_count}
+                    count += 1
+            words_count[name] = count
+        return words_count
 
 
 finder2 = WordsFinder('test_file.txt')
@@ -51,12 +53,3 @@ print(finder1.get_all_words())
 print(finder1.find('the'))
 print(finder1.count('the'))
 
-# finder1 = WordsFinder('Rudyard Kipling - If.txt')
-# print(finder1.get_all_words())
-# print(finder1.find('the'))
-# print(finder1.count('the'))
-#
-# finder1 = WordsFinder('Mother Goose - Monday’s Child.txt')
-# print(finder1.get_all_words())
-# print(finder1.find('the'))
-# print(finder1.count('the'))
