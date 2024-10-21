@@ -29,6 +29,8 @@
 #
 # Ваш код (количество слов для случайного выбора может быть другое):
 
+from random import choice
+
 first = 'Мама мыла раму'
 second = 'Рамена мало было'
 result = list(map(lambda x, y: x == y, first, second))
@@ -46,8 +48,6 @@ def get_advanced_writer(file_name):
 
 write = get_advanced_writer('example.txt')
 write('Это строчка', ['А', 'это', 'уже', 'число', 5, 'в', 'списке'])
-
-from random import choice
 
 
 class MysticBall:
