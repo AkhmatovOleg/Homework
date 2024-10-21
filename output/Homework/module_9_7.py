@@ -5,8 +5,8 @@
 # и "Составное" в противном случае.
 
 def is_prime(func):
-    def wrapper(a, b, c):
-        numbers = func(a, b, c)
+    def wrapper(*args):
+        numbers = func(*args)
         k = 0
         for j in range(1, numbers + 1):
             if numbers % j == 0:
@@ -23,8 +23,11 @@ def is_prime(func):
 
 
 @is_prime
-def sum_three(a, b, c):
-    return a + b + c
+def sum_three(*args):
+    total = 0
+    for i in args:
+        total += i
+    return total
 
 
 # Пример:
