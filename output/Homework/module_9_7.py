@@ -5,8 +5,8 @@
 # и "Составное" в противном случае.
 
 def is_prime(func):
-    def wrapper(*args):
-        numbers = func(*args)
+    def wrapper(*args, **kwargs):
+        numbers = func(*args, **kwargs)
         k = 0
         for j in range(1, numbers + 1):
             if numbers % j == 0:
