@@ -25,6 +25,8 @@ from datetime import datetime
 from threading import Thread
 
 time_start = datetime.now()
+
+
 def write_words(word_count, file_name):
     with open(file_name, 'a', encoding='utf-8') as file:
         for i in range(1, word_count + 1):
@@ -40,7 +42,6 @@ write_words(100, 'example4.txt')
 time_end = datetime.now()
 time_result = time_end - time_start
 print(f'Работа функций {time_result}')
-
 
 time_start_1 = datetime.now()
 
