@@ -25,8 +25,8 @@
 #
 # По итогу вы получите скрипт разблокирующий поток до баланса равному 500 и больше или блокирующий,
 # когда происходит попытка снятия при недостаточном балансе.
-import threading
-import time
+
+from time import sleep
 from threading import Thread, Lock
 from random import randint
 
@@ -43,7 +43,7 @@ class Bank:
             if self.balance >= 500 and self.lock.locked():
                 self.lock.release()
             print(f'Пополнение: {sum_bal}. Баланс: {self.balance}')
-            time.sleep(0.001)
+            sleep(0.001)
 
     def take(self):
         for i in range(100):
@@ -55,15 +55,15 @@ class Bank:
             else:
                 print('Запрос отклонён, недостаточно средств')
                 self.lock.acquire()
-            time.sleep(0.001)
+            sleep(0.001)
 
 
 bk = Bank()
 
 # Т.к. методы принимают self, в потоки нужно передать сам объект класса Bank
 
-th1 = threading.Thread(target=Bank.deposit, args=(bk,))
-th2 = threading.Thread(target=Bank.take, args=(bk,))
+th1 = Thread(target=Bank.deposit, args=(bk,))
+th2 = Thread(target=Bank.take, args=(bk,))
 
 th1.start()
 th2.start()
