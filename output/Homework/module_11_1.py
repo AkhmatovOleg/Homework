@@ -15,9 +15,14 @@
 #
 import numpy as np
 
-numbers = np.array([10, 20, 30, 40, 50])
+numbers = np.array([10, 20, 30, 40, 50], dtype=np.float32)
 
+
+print(numbers.shape)
+print(numbers[4])
 print(numbers)
+
+
 added = numbers + 10
 subtracted = numbers - 5
 multiplied = numbers * 2
@@ -28,3 +33,4 @@ print(f"Сложение: {added}")
 print(f"Вычитание: {subtracted}")
 print(f"Умножение: {multiplied}")
 print(f"Деление: {divided}")
+
