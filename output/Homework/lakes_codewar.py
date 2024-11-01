@@ -13,6 +13,7 @@ def likes(names):
     else:
         return f"{names[0]}, {names[1]} and {count - 2} others like this"
 
+
 # Примеры использования
 print(likes([]))  # no one likes this
 print(likes(["Alice"]))  # Alice likes this
