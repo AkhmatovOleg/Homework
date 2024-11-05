@@ -19,4 +19,4 @@ print(likes([]))  # no one likes this
 print(likes(["Alice"]))  # Alice likes this
 print(likes(["Alice", "Bob"]))  # Alice and Bob like this
 print(likes(["Alice", "Bob", "Charlie"]))  # Alice, Bob and Charlie like this
-print(likes(["Alice", "Bob", "Charlie", "David"]))  # Alice, Bob and 2 others like this
+print(likes(["Alice", "Bob", "Charlie", "David", "Oleg", "Anna"]))  # Alice, Bob and 2 others like this
