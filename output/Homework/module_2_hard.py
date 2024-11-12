@@ -1,6 +1,6 @@
 import random
 
-number = random.randint(3, 21)
+number = random.randint(3, 20)
 
 password = ""
 
