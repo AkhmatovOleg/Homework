@@ -10,5 +10,5 @@ for i in range(1, 21):
         if number % pair_sum == 0:
             password += f"{i}{j}"
 
-print(number)
-print(password)
+print(f'Случайное число: {number}')
+print(f'Пароль: {password}')
