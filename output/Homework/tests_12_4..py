@@ -2,6 +2,9 @@ import logging
 import unittest
 import Runner_12_2
 
+logging.basicConfig(level=logging.INFO, filemode="w", filename="runner_tests.log", encoding="utf-8",
+                    format="%(asctime)s, %(levelname)s | %(message)s")
+
 
 class RunnerTest(unittest.TestCase):
 
@@ -18,7 +21,7 @@ class RunnerTest(unittest.TestCase):
             logging.warning("Неверная скорость для Runner")
 
     def test_run(self):
-        runner_2 = Runner_12_2.Runner(45, 5)
+        runner_2 = Runner_12_2.Runner((233, 'hjk'), 5)
         for i in range(10):
             runner_2.run()
         try:
@@ -32,5 +35,3 @@ class RunnerTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-    logging.basicConfig(level=logging.INFO, filemode="w", filename="runner_tests.log", encoding="utf-8",
-                        format="%(asctime)s, %(levelname)s | %(message)s")
