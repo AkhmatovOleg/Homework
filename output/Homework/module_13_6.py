@@ -34,8 +34,7 @@ async def get_formulas(call):
 @dp.message_handler(commands=['start'])
 async def start(message):
     print('Привет! Я бот помогающий твоему здоровью.')
-    await message.answer('Привет! Я бот помогающий твоему здоровью. '
-                         'Если хотите узнать норму калорий нажмите на Рассчитать',
+    await message.answer('Привет! Я бот помогающий твоему здоровью.',
                          reply_markup=kb)
 
 
@@ -70,7 +69,6 @@ async def set_weight(message, state):
 async def send_calories(message, state):
     await state.update_data(weight=message.text)
     data = await state.get_data()
-    await message.answer(f"Возраст: {data['age']}, Рост: {data['growth']}, Вес: {data['weight']}")
     x = 10 * int(data['weight']) + 6.25 * int(data['growth']) - 5 * int(data['age']) + 5
     await message.answer(f"Ваша норма калорий: {x}")
     await state.finish()
