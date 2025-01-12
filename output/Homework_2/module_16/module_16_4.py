@@ -40,7 +40,7 @@ async def put_user(user_id: int, username: Annotated[
 
 
 @app.delete("/user/{user_id}")
-async def delete_user(user_id: int) -> str:
+async def delete_user(user_id: int) -> User:
     try:
         del_user = users.pop(user_id - 1)
         return del_user
