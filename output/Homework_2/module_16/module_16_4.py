@@ -41,8 +41,9 @@ async def put_user(user_id: int, username: Annotated[
 
 @app.delete("/user/{user_id}")
 async def delete_user(user_id: int) -> User:
-    try:
-        del_user = users.pop(user_id - 1)
-        return del_user
-    except IndexError:
-        raise HTTPException(status_code=404, detail="User was not found")
+    for i, t in enumerate(users):
+        if t.id == user_id:
+            del_user = users.pop(i)
+            return del_user
+    raise HTTPException(status_code=404, detail="User was not found")
+
