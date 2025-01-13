@@ -5,7 +5,7 @@ from pydantic import BaseModel
 from fastapi.templating import Jinja2Templates
 
 app = FastAPI()
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="output/Homework_2/module_16/module_16_5/templates")
 
 users = []
 
