@@ -1,7 +1,7 @@
-from app.backend.db import Base
+from output.Homework_2.module_17.module_17_2.app.backend.db import Base
 from sqlalchemy import Column, ForeignKey, Integer, String, Boolean
 from sqlalchemy.orm import relationship
-from app.models import *
+from output.Homework_2.module_17.module_17_2.app.models import *
 
 
 class Task(Base):
