@@ -1,7 +1,7 @@
-from app.backend.db import Base
+from output.Homework_2.module_17.module_17_2.app.backend.db import Base
 from sqlalchemy import Column, ForeignKey, Integer, String, Boolean
 from sqlalchemy.orm import relationship
-
+from output.Homework_2.module_17.module_17_2.app.models import *
 
 class User(Base):
     __tablename__ = "users"
@@ -13,6 +13,10 @@ class User(Base):
     slug = Column(String, unique=True, index=True)
 
     tasks = relationship("Task", back_populates="user")
+
+
+from sqlalchemy.schema import CreateTable
+print(CreateTable(User.__table__))
 
 
 
